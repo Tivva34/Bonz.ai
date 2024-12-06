@@ -788,6 +788,10 @@ a {
         align-self: center;
     }
 
+    .about__info-section h2 {
+        margin: 0 0.2rem;
+    }
+
     .about__info-section p {
         margin: 0 .3rem 1rem;
     }
