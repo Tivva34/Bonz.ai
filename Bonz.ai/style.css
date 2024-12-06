@@ -829,8 +829,9 @@ a {
     }
 
     .about__info {
-        margin: 0 0 1rem 0;
+        margin: 1rem 0 1rem 0;
     }
+
 
     .about__info-section {
         width: 80vw;
