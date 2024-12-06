@@ -730,6 +730,7 @@ a {
     object-fit: cover;
     border: var(--border-box);
     border-radius: .5rem;
+    margin-bottom: 1rem;
 }
 
 .about__images-grid img:hover {
@@ -737,7 +738,8 @@ a {
 }
 
 .about__images-grid h3 {
-    padding: .2rem;
+
+    padding: .5rem;
     background-color: var(--background-dark);
     border: var(--border-box);
     border-radius: .5rem;
