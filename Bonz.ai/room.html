@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Room Info</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header__nav">
+        <img src="assets/logo/bonz.ai-logo-white-landscape.png" alt="Bonz.ai" class="rooms__title" />
+        <section class="header__nav-links">
+            <a href="landing.html" class="nav__start">Start</a>
+            <a href="search.html" class="nav__rooms">Rooms</a>
+            <a href="about.html" class="nav__info">About us</a>
+        </section>
+        <section class="header__nav-menu">
+            <i class="fa-solid fa-bars fa-2x"></i>
+        </section>
+    </header>
+    <main class="page__wrapper">
+        <section class="content__wrapper room__wrapper" id="room-content">
+            
+        </section>
+    </main>
+    <footer class="footer__nav">
+        <section class="footer__nav-links">
+            <h3>Navigation</h3>
+            <a href="landing.html" class="nav__start">Start</a>
+            <a href="search.html" class="nav__rooms">Rooms</a>
+            <a href="about.html" class="nav__info">Info</a>
+        </section>
+        <section class="footer__nav-about">
+            <h3>About us</h3>
+            <a href="about.html" class="nav__info">Our story</a>
+            <a href="about.html" class="nav__info">Our team</a>
+            <a href="search.html" class="nav__rooms">Locations</a>
+        </section>
+        <section class="footer__nav-socials">
+            <h3>Socials</h3>
+            <article class="footer__nav-socials-logo">
+                <i class="fa-brands fa-instagram" aria-label="instagram"></i>
+                <i class="fa-brands fa-facebook" aria-label="facebook"></i>
+                <i class="fa-brands fa-x-twitter" aria-label="x-twitter"></i>
+            </article>
+        </section>
+    </footer>
+    <script>
+       
+        const rooms = {
+            Gabana: {
+                img: "assets/photos/01-night.jpg",
+                name: "Gabana",
+                desc: "A cozy eco-room in Karlstad.",
+                price: "399 sek / night"
+            },
+            Zen: {
+                img: "assets/photos/02-night.jpg",
+                name: "Zen",
+                desc: "Relax in the Zen room.",
+                price: "399 sek / night"
+            },
+            Eden: {
+                img: "assets/photos/03-night.jpg",
+                name: "Eden",
+                desc: "Experience tranquility in Eden.",
+                price: "399 sek / night"
+            },
+            Livonia: {
+                img: "assets/photos/04-night.jpg",
+                name: "Livonia",
+                desc: "Modern comfort in Livonia.",
+                price: "399 sek / night"
+            },
+            Samsara: {
+                img: "assets/photos/05-night.jpg",
+                name: "Samsara",
+                desc: "Find balance in Samsara.",
+                price: "399 sek / night"
+            },
+            Pangea: {
+                img: "assets/photos/06-night.jpg",
+                name: "Pangea",
+                desc: "Global vibes in Pangea.",
+                price: "399 sek / night"
+            },
+            Osho: {
+                img: "assets/photos/07-night.jpg",
+                name: "Osho",
+                desc: "Peaceful retreat in Osho.",
+                price: "399 sek / night"
+            },
+            Florite: {
+                img: "assets/photos/08-night.jpg",
+                name: "Florite",
+                desc: "Nature-inspired Florite.",
+                price: "399 sek / night"
+            },
+            Amethyst: {
+                img: "assets/photos/09-night.jpg",
+                name: "Amethyst",
+                desc: "Luxury and calm in Amethyst.",
+                price: "399 sek / night"
+            }
+        };
+
+        
+        const params = new URLSearchParams(window.location.search);
+        const roomKey = params.get("room");
+        const room = rooms[roomKey];
+
+        
+        const content = document.getElementById("room-content");
+        if (room) {
+            content.innerHTML = `
+                <h2>${room.name}</h2>
+                <img src="${room.img}" alt="${room.name}" style="max-width:1000px;">
+                <h3>${room.desc}</h3>
+                <p>Price: ${room.price}</p>
+                <a href="booking.html" class="book__now-btn">Book now</a>
+            `;
+        } else {
+            content.innerHTML = `<p>Room not found.</p>`;
+        }
+    </script>
+</body>
+</html>

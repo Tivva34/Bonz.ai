@@ -59,6 +59,8 @@ h3 {
 p,
 a {
     font-size: var(--font-size-base);
+    text-decoration: none;
+    color: var(--text-bright);
 }
 
 .page__wrapper {
@@ -404,7 +406,7 @@ a {
 
 .booking__room-section {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     align-items: center;
     padding: 1rem;
@@ -734,7 +736,7 @@ a {
 }
 
 .about__images-grid img:hover {
-    transform: scale(1.1);
+    transform: scale(1);
 }
 
 .about__images-grid h3 {
@@ -751,6 +753,38 @@ a {
     padding: 0;
 }
 
+#room-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+#room-content img {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 1rem;
+}
+#room-content p {
+    margin: 1rem 0;
+}
+
+#room-content .book__now-btn {
+    padding: 0.3rem 0.8rem;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+.room__wrapper {
+    max-width: 1600px;
+    min-width: 300px;
+    width: 80%;
+}
+.room__wrapper img {
+    width: 1200px;
+}
 @media screen and (max-width: 600px) {
 
     body {
